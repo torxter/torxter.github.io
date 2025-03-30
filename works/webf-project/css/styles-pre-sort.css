@@ -1,0 +1,617 @@
+:root{
+    --white: hsla(0, 0%, 100%, 1);
+    --text: rgb(225, 225, 225);
+
+    --invisible: hsla(0, 0%, 0%, 0);
+
+    --white-glow: hsla(0, 0%, 100%, 0.5);
+    --white-glow-25: hsla(0, 0%, 100%, 0.25);
+    --white-glow-12: hsla(0, 0%, 100%, 0.12);
+    --white-glow-3: hsla(0, 0%, 100%, 0.02);
+    --white-glow-1: hsla(0, 0%, 100%, 0.0059);
+    --blue-glow: hsla(210, 100%, 50%, 0.5);
+
+    --shadow: hsla(0, 0%, 0%, 0.5);
+    --shadow-50: hsla(0, 0%, 0%, 0.5);
+    --shadow-25: hsla(0, 0%, 0%, 0.25);
+    --shadow-12: hsla(0, 0%, 0%, 0.12);
+    --shadow-06: hsla(0, 0%, 0%, 0.06);
+
+    --eminence: hsla(282, 39%, 40%, 1);
+    --amethyst: hsla(270, 56%, 63%, 1);
+    --amethyst-dark: hsla(270, 56%, 53%, 1);
+    --royal-purple: hsla(256, 41%, 47%, 1);
+    --royal-purple-dark: hsla(256, 41%, 37%, 1);
+    --prussian-blue: hsla(206, 59%, 15%, 1);
+    --prussian-blue-90: hsla(206, 59%, 15%, .7);
+    --prussian-blue-dark-90: hsla(208, 58%, 10%, 0.9);
+    --prussian-blue-dark-95: hsla(208, 58%, 10%, 0.95);
+    --prussian-blue-50: hsla(206, 59%, 15%, .5);
+    --dark-green: hsla(178, 73%, 9%, 1);
+}
+/* Universal Styles */
+body{
+    background-color: var(--dark-green);
+    /*background-image: linear-gradient(-90deg, var(--white-glow-12), var(--invisible), var(--invisible), var(--white-glow-3));*/
+    background-blend-mode:overlay;
+    background-image: url("../images/pexels-pixabay-158163-darkened.jpg");
+    background-size: cover;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Metrophobic", sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: middle;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--prussian-blue);
+    background-image:             
+        repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-1) 1px, var(--white-glow-1) 2px, var(--white-glow-1) 3px, var(--invisible) 4px, var(--invisible) 15px),
+        repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-1) 1px, var(--white-glow-1) 2px, var(--white-glow-1) 3px, var(--invisible) 4px, var(--invisible) 15px),
+        repeating-linear-gradient(180deg, var(--invisible) 2px, var(--white-glow-1) 3px, var(--white-glow-1) 4px, var(--white-glow-1) 5px, var(--invisible) 5px, var(--invisible) 18px),  
+        linear-gradient(180deg, var(--white-glow-12), var(--invisible), var(--invisible), var(--shadow-12)),
+        linear-gradient(180deg, var(--prussian-blue-50), var(--prussian-blue-dark-90),var(--prussian-blue-dark-90), var(--prussian-blue-50))/*,
+        url(../images/pexels-pixabay-158163-darkened.jpg)*/;
+    padding: 0px 0px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+header h1{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 40vh;
+    min-height: 200px;
+    background-image: url(../images/HOS2.0_Logo_EN_Final.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--invisible);
+}
+
+header h1 img{
+    height: 25vh;
+}
+
+nav{
+    background-color: var(--royal-purple);
+    padding: 10px 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-shadow: 0px 0px 10px var(--shadow),
+                inset 0px 0px 10px var(--blue-glow),
+                inset 0px 2px 0px var(--white-glow),
+                inset -0px -2px 0px var(--white-glow);
+    background-image:
+            repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(180deg, var(--invisible) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--white-glow-3) 4px, var(--invisible) 4px, var(--invisible) 11px),     
+            linear-gradient(180deg, var(--amethyst-dark), var(--royal-purple));
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px;
+    margin: 0px 5px;
+    background-color: var(--amethyst);
+    background-image: 
+        linear-gradient(0deg, var(--prussian-blue), var(--royal-purple));
+    box-shadow: inset 0px 0px 10px var(--blue-glow),
+                inset 1px 1px 2px var(--white-glow),
+                inset -1px -1px 2px var(--white-glow),
+                3px 3px var(--shadow-25);
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+nav a:active{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    box-shadow: inset 0px 0px 10px var(--blue-glow),
+                inset 1px 1px 2px var(--white-glow),
+                inset -1px -1px 2px var(--white-glow),
+                1px 1px var(--shadow-25);
+}
+
+nav a:hover{
+    text-shadow: 0px 0px 4px var(--blue-glow),
+                0px 0px 4px var(--white-glow-25);
+    
+}
+
+section{
+    background-color: var(--prussian-blue);
+    background-image: 
+        linear-gradient(135deg, var(--white-glow-12), var(--invisible), var(--invisible), var(--invisible)),
+        linear-gradient(180deg, var(--prussian-blue) 0px, var(--royal-purple-dark) 50px);
+    margin: 20px;
+    padding: 10px;
+    margin-bottom: 0px;
+    display: block;
+    text-align: left;
+    box-shadow: inset 0px 0px 10px var(--blue-glow),
+                inset 2px 2px 0px var(--white-glow),
+                inset -2px -2px 0px var(--white-glow),
+                0px 0px 10px var(--shadow);
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-shadow: 1px 1px var(--shadow-12);
+
+}
+
+section > h2 {
+    margin-top: 10px;
+    text-shadow: 2px 2px 2px var(--shadow-50);
+}
+
+footer{
+    background-color: var(--prussian-blue);
+    background-image: linear-gradient(180deg, var(--white-glow-3), var(--invisible), var(--invisible), var(--shadow-12));
+    box-shadow: inset 0px 0px 10px var(--blue-glow),
+                inset 0px 2px 0px var(--white-glow),
+                0px 0px 10px var(--shadow);
+    padding: 5px 0px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    gap: 0px;
+}
+
+footer p{
+    padding: 0px;
+    margin: 2px;
+}
+
+a, a:visited, a:link{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:active, a:hover{
+    color: white;
+    text-shadow: 0px 0px 4px var(--blue-glow),
+                0px 0px 4px var(--white-glow-25);
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.material-icons{
+    display: inline-block;
+    font-size: 1em !important;
+}
+
+/* Forms */
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="tel"], textarea{
+    background-color: var(--prussian-blue-90);
+    color: var(--text);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px 0px;
+    border-style: solid;
+    border-color: var(--white-glow-12);
+    border-width: 1px;
+    box-shadow: inset 0px 0px 10px var(--blue-glow),
+                inset 1px 1px 2px var(--white-glow),
+                inset -1px -1px 2px var(--white-glow);
+    background-image: 
+    linear-gradient(var(--prussian-blue-dark-95), var(--prussian-blue-dark-95)),
+    url(../images/pexels-pixabay-158163-darkened.jpg);
+    background-size:contain;
+    font-family: "Metrophobic", sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 10px;
+}
+
+label{
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="submit"],  input[type="reset"]{
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px 5px;
+    background-color: var(--amethyst);
+    background-image: 
+        linear-gradient(0deg, var(--prussian-blue), var(--royal-purple));
+    box-shadow: inset 0px 0px 10px var(--blue-glow),
+                inset 1px 1px 2px var(--white-glow),
+                inset -1px -1px 2px var(--white-glow),
+                3px 3px var(--shadow-12);
+    border-radius: 2px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    
+}
+
+
+
+/* Desktop Styles */
+@media (min-width: 1001px) {
+    body {
+        font-size: 16px;
+    }
+
+    section iframe {
+        float: left;
+        box-shadow: 2px 2px var(--shadow-25);
+        margin-right: 15px;
+    }
+
+    header h1{
+        background-size:contain ;
+        background-repeat: no-repeat;
+    }
+
+    section h3{
+        border-bottom-style: solid;
+        border-bottom-color: var(--white-glow-12);
+        border-bottom-width: 1px;
+        padding-bottom: 5px;
+        text-shadow: 2px 2px var(--shadow-50);
+    }
+
+    main > h2 {
+        text-align: center;
+        font-size: 2em;
+        margin: 0px;
+        margin-top: 20px;
+        padding: 5px;
+        font-weight: bold;
+        background-image:
+            radial-gradient(var(--white-glow-12), var(--invisible), var(--invisible), var(--invisible)),
+            repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            linear-gradient(180deg, var(--amethyst-dark), var(--royal-purple));
+        text-shadow: 2px 2px var(--shadow-25);
+        box-shadow: inset 0px 0px 10px var(--blue-glow),
+                    inset 0px 2px 2px var(--white-glow),
+                    inset 0px -2px 2px var(--white-glow);
+    }
+    
+    td img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 2px 2px var(--shadow-25);
+        border-style: solid;
+        border-color: var(--white-glow-12);
+        border-width: 2px;
+    }
+
+    tr:nth-child(2n) {
+        background-color: var(--shadow-12);
+    }
+
+    th{
+        background-color: var(--shadow-25);
+        text-align: center;
+    }
+
+    th:nth-child(5) {
+        text-align: left;
+    }
+
+    td:nth-child(2n) {
+        background-color: var(--shadow-12);
+    }
+
+    td{
+        padding: 10px;
+        background-image: linear-gradient(0deg, var(--white-glow-3), var(--invisible), var(--shadow-06));
+    }
+
+    tr{
+        padding: 0px;
+        margin: 0px;
+        border-bottom: solid 1px var(--white-glow-12);
+    }
+
+    table{
+        padding: 0px;
+        margin: 0px;
+        row-gap: 0px;
+        column-gap: 0px;
+        box-shadow:inset 0px 0px 10px var(--blue-glow),
+                    inset 2px 2px 0px var(--white-glow),
+                    inset -2px -2px 0px var(--white-glow),
+                    0px 0px 10px var(--shadow);
+    }
+
+    section iframe{
+        width:560px; 
+        height:315px; 
+        display: block;
+    }
+    section p{
+        display: block;
+    }
+
+    form{
+        width: 800px;
+    }
+
+    .contact-form-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+/* Tablet styles */
+@media (min-width: 801px) and (max-width: 1000px) {
+    body {
+        font-size: 14px;
+    }
+
+    td img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 2px 2px var(--shadow-25);
+        margin-right: 10px;
+    }
+
+    tr > td:nth-child(2), tr > th:nth-child(2), tr > td:nth-child(3), tr > th:nth-child(3), tr > td:nth-child(4), tr > th:nth-child(4) {
+        
+        writing-mode:vertical-lr;
+        height: 100%;
+    }
+
+    td{
+        background-image: linear-gradient(0deg, var(--white-glow-3), var(--invisible), var(--invisible));
+    }
+
+    tr:nth-child(2n) {
+        background-color: var(--shadow-12);
+    }
+
+    th{
+        background-color: var(--shadow-25);
+        min-width: 1em;
+        padding: 5px;
+    }
+
+    td{
+        min-width: 1em;
+        padding: 5px;
+    }
+
+    td:nth-child(2n) {
+        background-color: var(--shadow-12);
+    }
+
+    iframe{
+        width: calc(100vw - 60px);
+        aspect-ratio: 16/9;
+        display: block;
+    }
+
+    section p{
+        display: block;
+    }
+
+    section h3{
+        text-align: center;
+        background-image: linear-gradient(90deg, var(--invisible), var(--white-glow-12), var(--white-glow-12), var(--invisible));
+    }
+
+    main > h2 {
+        text-align: center;
+        font-size: 2em;
+        margin: 0px;
+        margin-top: 20px;
+        padding: 5px;
+        font-weight: bold;
+        background-image:
+            radial-gradient(var(--white-glow-12), var(--invisible), var(--invisible), var(--invisible)),
+            repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            linear-gradient(180deg, var(--amethyst-dark), var(--royal-purple));
+        text-shadow: 2px 2px var(--shadow-25);
+        box-shadow: inset 0px 0px 10px var(--blue-glow),
+                    inset 0px 2px 2px var(--white-glow),
+                    inset 0px -2px 2px var(--white-glow);
+    }
+
+
+
+}
+
+/* Phone styles */
+
+@media (max-width: 800px) {
+    body {
+        font-size: 12px;
+    }
+
+    main > h2 {
+        text-align: center;
+        font-size: 2em;
+        margin: 0px;
+        margin-top: 20px;
+        padding: 5px;
+        font-weight: bold;
+        background-image:
+            radial-gradient(var(--white-glow-12), var(--invisible), var(--invisible), var(--invisible)),
+            repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            linear-gradient(180deg, var(--amethyst-dark), var(--royal-purple));
+        text-shadow: 2px 2px var(--shadow-25);
+        box-shadow: inset 0px 0px 10px var(--blue-glow),
+                    inset 0px 2px 2px var(--white-glow),
+                    inset 0px -2px 2px var(--white-glow);
+    }
+
+    nav a{
+        width: 100%;
+        box-sizing: border-box;
+        margin: 3px 0px;
+    }
+
+    nav{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    tr{
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        background-image: 
+            radial-gradient(var(--invisible), var(--invisible), var(--royal-purple-dark)), 
+            repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+            repeating-linear-gradient(180deg, var(--invisible) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--white-glow-3) 4px, var(--invisible) 4px, var(--invisible) 11px)
+            ;    
+        background-blend-mode: color-burn;
+        border-color: var(--white-glow-12);
+        border-style: solid;
+        border-width: 3px;
+        padding: 3px;
+    }
+
+    td img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 2px 2px var(--shadow-25);
+        margin: 10px;
+    }
+
+    td{
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    /* Hide the headers */
+    th{
+        display: none;
+    }
+    tr:nth-child(1){
+        display:none;
+    }
+
+    td:nth-child(1){
+        width: 120px;
+        box-sizing: border-box;
+    }
+    td:nth-child(2){
+        width: calc(100% - 120px);
+        box-sizing: border-box;       
+        font-size: 7.5vw; 
+        text-shadow: 2px 2px 4px var(--blue-glow),
+                    2px 2px 4px var(--white-glow-12),
+                    -2px -2px 4px var(--white-glow-12),
+                    -2px -2px 4px var(--blue-glow);
+        text-align: center;
+
+    }
+    td:nth-child(3){
+        width: 100%;
+        box-sizing: border-box;
+    }
+    td:nth-child(4){
+        width: 100%;
+        box-sizing: border-box;
+    }
+    td:nth-child(5){
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Add the labels for each cell */
+
+    td:nth-child(2)::before{
+        content: "Name: ";
+        font-weight: bold;
+        box-sizing: border-box;
+        width: 50%;
+        display: none;
+    }
+    td:nth-child(3)::before{
+        content: "Role: ";
+        font-weight: bold;
+    }
+    td:nth-child(4)::before{
+        content: "Game: ";
+        font-weight: bold;
+    }
+    td:nth-child(5)::before{
+        content: "Description: ";
+        font-weight: bold;
+    }
+
+    iframe{
+        width: calc(100vw - 60px);
+        aspect-ratio: 16/9;
+        display: block;
+    }
+
+    section h3{
+        text-align: center;
+        background-image: linear-gradient(90deg, var(--invisible), var(--white-glow-12), var(--white-glow-12), var(--invisible));
+    }
+}
