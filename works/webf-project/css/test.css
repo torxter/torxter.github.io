@@ -1,0 +1,18 @@
+header {
+overflow: hidden;
+  background-image: none;
+  perspective: 20px;
+  perspective-origin: 50% 50%;
+}
+
+.d3d-1 {
+position: absolute;
+  top:0px;
+  width: 6000px;
+  height: 1000px;
+  background-color: #FFFFFF00;
+  background-image: radial-gradient(var(--white-glow-12), var(--invisible), var(--invisible), var(--invisible)),
+  repeating-linear-gradient(60deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px),
+  repeating-linear-gradient(120deg, var(--invisible) 0px, var(--white-glow-3) 1px, var(--white-glow-3) 2px, var(--white-glow-3) 3px, var(--invisible) 4px, var(--invisible) 10px);
+  transform: scaleX(4) scaleY(1) scaleZ(1) rotateX(-60deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(1deg) skewY(0deg);
+}
