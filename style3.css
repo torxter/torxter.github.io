@@ -79,7 +79,7 @@ h1{
     letter-spacing: 0.3rem;
     margin: 0;
     padding: 10px;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
     text-orientation: upright;
     position: absolute;
     right: 31.5%
