@@ -6,7 +6,7 @@ function getRandomInt(min, max) {
 
 function setStylesheet() {
 
-    var style = "style" + getRandomInt(1, 2) + ".css";
+    var style = "style" + getRandomInt(1, 3) + ".css";
 
     document.getElementById("stylesheet").setAttribute("href", style);
 }
