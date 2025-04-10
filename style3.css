@@ -73,10 +73,14 @@ body{
 
 h1{
     font-family: "Roboto", Verdana, sans-serif;
-    font-size: 4vw;
+    font-size: 2.5vh;
     color: white;
     text-shadow: var(--text-shadow);
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.3rem;
     margin: 0;
     padding: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: absolute;
+    right: 31.5%
 }
