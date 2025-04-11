@@ -1,0 +1,313 @@
+/*
+23. Teal blue, light blue, & light gray
+Hex codes: #1995AD, #A1D6E2, #F1F1F2
+*/
+
+body {
+    background-color: #D1D1D2;
+    font-family: verdana, sans-serif;
+    text-align: left;
+    padding: 20px;
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-blend-mode:overlay;
+    overflow-x: hidden;
+}
+
+header {
+    color:white;
+    background-color:rgba(25, 149, 173, 0.9);
+    background-image: linear-gradient(180deg, #37b5cec0, #a1d6e200);
+    text-align: center;
+    font-size: 100px;
+    font-family: Roboto Mono, monospace;
+    text-shadow: black 1px 1px 1px;
+}
+
+header a, header a:visited, header a:active, header a:hover, header a:link{
+    color: white;
+    text-decoration: none;
+}
+
+nav, footer {
+    background-color: rgba(161, 214, 226, 0.9);
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4px;
+    gap: 10px;
+}
+
+a:link, a:visited{
+    color: #1995AD;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    text-decoration: underline;
+}
+
+
+
+.nav-link:link, .nav-link:visited{
+    background-color: #F1F1F2;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px 10px 5px 10px;
+    margin: 3px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-link:hover, .nav-link:active{
+    background-color: rgba(25, 149, 173, 0.9);
+    color: white;
+}
+
+.further-reading:link, .further-reading:visited{
+    background-color: #F1F1F2;
+    color: rgb(221, 158, 41);
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.further-reading:hover, .further-reading:active{
+    color: rgb(242, 166, 25);
+    text-decoration: underline;
+}
+
+nav, header, footer, section, aside {
+    border-width: 0px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+header, footer, section, aside {
+    padding: 10px;
+}
+
+iframe, img, blockquote, figure{
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+section, aside{
+    background-color: rgba(241, 241, 242, 0.9);
+}
+
+
+
+/* Headers */
+
+h1{
+    font-size: 30px;
+}
+
+section > h2:first-child{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+section > h3:first-child{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+/* Lists */
+
+ul, ol{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Figures, Blockquotes, etc */
+
+figure, blockquote{
+    border-color: #A1D6E2;
+    border-width: 2px;
+    background-color: #E1E1E2;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+}
+
+aside{
+    text-align: center;
+}
+
+code{
+    font-weight: bold;
+    font-family: Roboto Mono, monospace;
+
+}
+
+/* Pseudo Selectors */
+
+#main-section{
+    background-color: rgba(241, 241, 242, 0.9);
+    border-radius: 10px;
+    padding: 1px 10px 10px 10px;
+    margin: 5px;
+    text-shadow: rgba(0, 0, 0, 0.205) 1px 1px 1px;
+}
+
+#main-section::before{
+    content: "";
+    height: 5px;
+    font-size: 3vh;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    background-color: rgba(25, 149, 173, 0);
+    background-image: linear-gradient(90deg, #37b5cec0, #a1d6e200);
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    border-width: 0px;
+    padding: 5px;
+    margin: -1px 0px 0px -10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#main-section::after{
+    content: "";
+    height: 5px;
+    font-size: 3vh;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    background-color: rgba(25, 149, 173, 0);
+    background-image: linear-gradient(90deg, #a1d6e200, #37b5cec0);
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    border-width: 0px;
+    padding: 5px;
+    margin: -1px 0px -10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#main-section > h2:first-child{
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+/* UI Icon Fixes */
+.material-icons{
+    display: inline-flex;
+    vertical-align: middle;
+    cursor: pointer;
+    max-width: 23px;
+}
+
+/* Table Design */
+
+td{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+th, td{
+    text-align: center;
+    padding: 5px;
+}
+
+table{
+    width: 100%;
+    border-spacing: 5px;
+}
+
+/* Week 11 Flexbox Stuff */
+
+.flexbox-demo-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.flexbox-demo-item{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    width: 30%;
+    list-style-type: none;
+    min-width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 50px;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5px
+    }
+
+    .nav-link{
+        width:100%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 5px !important;
+        margin: 0px !important;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"], input[type="url"], input[type="search"], select, textarea {
+        width: 100% !important;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0px !important;
+    }
+
+    form{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    body{
+        padding: 0px !important;
+        margin: 0px
+    }
+
+    section{
+        overflow-wrap: hidden !important;
+        overflow: hidden !important;
+    }
+
+    header{
+        display: block;
+        position: sticky !important;
+        top: 0px !important;
+    }
+
+    h1{
+        margin: 0px;
+    }
+
+}

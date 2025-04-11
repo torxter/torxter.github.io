@@ -1,0 +1,140 @@
+<!-- This page is styled externally -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Me</title>
+        <meta name="author" content="Tom McCavour">
+        <meta name="description" content="Contact">
+        <meta name="keywords" content="css, style, language, inline, internal, external, declaration, value, property, ruleset, selector, appearance, fonts, sizes, colours, colors">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        
+        <!-- External Stylesheet -->
+        <link rel="stylesheet" href="site.css">
+
+        <!-- Bespoke Internal Styling -->
+        <style>
+            /*
+                23. Teal blue, light blue, & light gray
+                Hex codes: #1995AD, #A1D6E2, #F1F1F2
+            */
+            label{
+                display: inline-block;
+                min-width: 115px;
+                padding: 3px;
+                margin: 3px;
+            }
+            input[type="text"], input[type="email"], input[type="tel"]{
+                display: inline-block;
+                width: 300px;
+                margin: 3px;
+            }
+            textarea{
+                width: 455px;
+                box-sizing: border-box;
+                font-family: Verdana, sans-serif;
+                font-size: 1em;
+            }
+            input[type="text"], input[type="email"], input[type="tel"], textarea{
+                border-color: #1995AD;
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 5px;
+                background-color: #FFFFFFCC;
+                padding: 5px;
+            }
+            h2 + p::first-letter{
+                font-size: 2em;
+                font-weight: bold;
+                float: left;
+                margin-right: 0.1em;
+                margin-bottom: 0.1em;
+                line-height: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main heading of page -->
+        <header>
+            <h1>Contact Me</h1>
+        </header>
+        
+        <!-- Main content of page -->
+        <main>
+            <nav>
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="page1.html" class="nav-link">HTML</a>
+            <a href="page2.html" class="nav-link">CSS</a>
+            <a href="#" class="nav-link">Resources</a>
+            </nav>
+        <section id="main-section">
+            <h2>About</h2>
+            <p>This site was developed by Thomas McCavour. I'm currently a student at Conestoga College studying Computer Application Development.</p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>If you have any questions or comments about this site, please feel free to contact me at <a href="mailto:tmccavour1651@conestogac.on.ca" style="display: inline-block"><span class="material-icons">email</span> TMcCavour1651@conestogac.on.ca</a>.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14072.584393430723!2d-79.90476800486675!3d43.52600127545222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6f4810934363%3A0x5b97f97d97a9fef4!2sConestoga%20College-%20Milton%20campus!5e1!3m2!1sen!2sca!4v1741884505946!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section>
+            <h2>Get in touch:</h2>
+            <form action="mailto:tmccavour1651@conestogac.on.ca">
+                <!-- Info boxes -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label type="lastName">Last Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                
+                <!-- Radio Boxes -->
+                <p>What technology are you most interested in?</p>
+                <input type="radio" id="html" name="interest" value="html">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="interest" value="css">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="interest" value="javascript">
+                <label for="javascript">JavaScript</label><br>
+                <input type="radio" id="sql" name="interest" value="SQL">
+                <label for="sql">SQL</label><br>
+                
+                <!-- Checkboxes -->
+                <p>What are your roles?</p>
+                <input type="checkbox" id="student" name="role" value="student">
+                <label for="student">Student</label><br>
+                <input type="checkbox" id="teacher" name="role" value="teacher">
+                <label for="teacher">Teacher</label><br>
+                <input type="checkbox" id="alumni" name="role" value="alumni">
+                <label for="alumni">Alumni</label><br>
+                <input type="checkbox" id="developer" name="role" value="developer">
+                <label for="developer">Developer</label><br>
+                <input type="checkbox" id="other" name="role" value="other">
+                <label for="other">Other</label><br>
+                
+                <!-- Message Box -->
+                <p>Send me a message!</p>
+                <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea><br>
+                
+                <!-- Buttons -->
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+        </main>
+
+        <!-- Footer of page -->
+        <footer>
+            <p>&copy;2025, Thomas McCavour - except for the written words and pictures.</p>
+        </footer>
+    </body>
+</html>

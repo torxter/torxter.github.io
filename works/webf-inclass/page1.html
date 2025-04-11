@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!-- This page is styled internally -->
+<!-- 23. Teal blue, light blue, & light gray
+Hex codes: #1995AD, #A1D6E2, #F1F1F2 -->
+<html lang="en">
+    <head>
+        <title>HTML</title>
+        <meta name="author" content="Thomas McCavour">
+        <meta name="description" content="HTML content">
+        <meta name ="keywords" content ="html, markup, web, language, content, links, tags, web, language, document, images, site, structure, paragraphs, css, heading, list, ordered, unordered">
+        <meta name="comments" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        
+        <!-- External Styling -->
+        <link rel="stylesheet" type="text/css" href="site.css">
+
+        <!-- Internal Styling 
+        <style>
+            body {
+                background-color: #D1D1D2;
+                font-family: verdana, sans-serif;
+                text-align: justify;
+                padding: 20px;
+                background-image: url('images/background.png');
+                background-repeat: no-repeat;
+                background-size: 100vw;
+                background-origin: content-box;
+            }
+
+            header {
+                color:white;
+                background-color:rgba(25, 149, 173, 0.9);
+                text-align: center;
+                font-size: 5vh;
+                font-family: Roboto Mono, monospace;
+            }
+
+            nav, footer {
+                background-color: rgba(161, 214, 226, 0.9);
+                padding: 10px;
+            }
+
+            nav{
+                text-align: center;
+            }
+
+            a:link, a:visited{
+                color: #1995AD;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            a:hover, a:active{
+                text-decoration: underline;
+            }
+
+            .nav-link:link, .nav-link:visited{
+                background-color: #F1F1F2;
+                border-radius: 5px;
+                border-style: none;
+                padding: 5px 10px 5px 10px;
+                margin: 3px;
+                font-weight: bold;
+                color: black;
+                text-decoration: none;
+            }
+
+            .nav-link:hover, .nav-link:active{
+                background-color: rgba(25, 149, 173, 0.9);
+                color: white;
+            }
+
+            nav, header, footer, section, aside {
+                border-width: 0px;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 5px;
+            }
+
+            iframe, img, blockquote, figure{
+                border-radius: 5px;
+            }
+
+            section, aside{
+                background-color: rgba(241, 241, 242, 0.9);
+            }
+
+            code{
+                font-weight: bold;
+                font-family: Roboto Mono, monospace;
+
+            }
+
+            h1{
+                font-size: 5vh;
+            }
+
+            figure, blockquote{
+                border-color: #A1D6E2;
+                border-width: 2px;
+                background-color: #E1E1E2;
+                margin: 5px;
+                padding: 10px;
+                display: inline-block;
+            }
+        -->
+        </style>
+    </head>
+    <body>
+        <!-- Main heading of page -->
+        <header>
+            <h1>Introduction to HTML</h1>
+        </header>
+        
+        <!-- Main content of page -->
+        <main>
+            <nav>
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="page2.html" class="nav-link">CSS</a>
+            <a href="page3.html" class="nav-link">Contact</a>
+            <a href="#" class="nav-link">Resources</a>
+            </nav>
+
+            
+            <!-- Intro -->
+            <section id="main-section">
+                <h2>What is HTML?</h2>
+                <blockquote cite="https://www.w3schools.com//html/html_intro.asp">
+                    <p>HTML is the standard markup language for creating Web pages.</p>
+                </blockquote>
+            </section>
+
+            
+            <!-- First section -->
+            <section>
+                <h2>HTML Page Structure</h2>
+                <ol>
+                    <li><code>DOCTYPE html</code> document type declaration</li>
+                    <li><code>html</code> to contain all page code
+                        <ol>
+                            <li><code>head</code></li>
+                            <li><code>body</code> to contain page content</li>
+                        </ol>
+                    </li>
+                    
+                </ol>
+            </section>
+
+            
+            
+            <!-- Second section -->
+            <section>
+                <h2>Overview</h2>
+                <ul>
+                    <li>The most basic building block of the Web.</li>
+                    <li>Gives structure and meaning to a web page.</li>
+                    <li>"Hypertext" links web pages to each other. Links may be to the same or a different website.</li>
+                    <li>HTML markup is built using tags.</li>
+                    <li>The latest standard is HTML5</li>
+                </ul>
+            </section>
+            
+
+            
+            <!-- Third section -->
+            <section>
+                <h2>Basic sections of a website</h2>
+                <p>HTML5 introduced semantic elements and containers for the purpose of accessiblity and better site organization. Here are some basic sections on a website:</p>
+                <ul>
+                    <li><strong><code>header</code></strong> to contain the main heading of the page</li>
+                    <li><strong><code>nav</code></strong> is the main site's navigation bar</li>
+                    <li><strong><code>main</code></strong> to contain the main content of the page</li>
+                    <li><strong><code>section</code></strong> to section the page and group content</li>
+                    <li><strong><code>aside</code></strong> to create a sidebar for the page</li>
+                    <li><strong><code>footer</code></strong> to contain the copyright and contact information</li>
+                </ul>
+            </section>
+            
+
+            
+            <!-- Fourth section -->
+            <section>
+                <h2>HTML Syntax</h2>
+                <figure>
+                    <img src="images/tags.png" alt="The structure of an HTML tag.">
+                    <figcaption>HTML Components</figcaption>
+                </figure>
+                <ul>
+                    <li>An HTML element is identified using tags.</li>
+                    <li>A tag consists of the name of the element enclosed in <code>&lsaquo;</code> and <code>&rsaquo;</code>.</li>
+                    <li>HTML is case insensitive.</li>
+                    <li>To write a paragraph on a web page, use opening and closing p tags to enclose the text.</li>
+                    </ul>
+            </section>
+                
+            <!-- Fifth section -->
+            <section>
+                <h2>Basic HTML Syntax</h2>
+                <ul class="flexbox-demo-container">
+                    <li class="flexbox-demo-item"><a href="https://www.w3schools.com/html/html_paragraphs.asp">paragraphs</a></li>
+                    <li class="flexbox-demo-item"><a href="https://www.w3schools.com/html/html_headings.asp">headings</a></li>
+                    <li class="flexbox-demo-item"><a href="https://www.w3schools.com/html/html_links.asp">hyperlinks</a></li>
+                    <li class="flexbox-demo-item"><a href="https://www.w3schools.com/html/html_images.asp">images</a></li>
+                    <li class="flexbox-demo-item"><a href="https://www.w3schools.com/html/html_lists.asp">lists; ordered and unordered</a></li>
+                    <li class="flexbox-demo-item"><a href="https://www.w3schools.com/html/html_formatting.asp">text markup elements</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>HTML Tutorial</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BzYMFd-lQL4?si=LMPnDRY7G85c_xjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <aside>
+                    <table>
+                        <tr>
+                            <th>Resource 1</th>
+                            <th>Resource 2</th>
+                            <th>Resource 3</th>
+                        </tr>
+                        <tr>
+                        <td><a class="further-reading" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML: Hypertext Markup Language</a></td>
+                        <td><a class="further-reading" href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></td>
+                        <td><a class="further-reading" href="https://www.codecademy.com/learn/learn-html">Codecademy HTML Course</a></td>
+                        </tr>
+                    </table>
+                </aside>
+            
+            </section>
+            
+        </main>
+    <footer>
+        <p>&copy;2025, Thomas McCavour - except for the written words and pictures.</p>
+    </footer>
+    </body>
+</html>
