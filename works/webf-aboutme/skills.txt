@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skills</title>
+
+        <!-- Meta Data -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Home page for the website">
+        <meta name="keywords" content="Home, website, page">
+        <meta name="author" content="Thomas McCavour">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="styles/site.css">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <header>
+            <h1>Thomas McCavour</h1>
+        </header>
+
+        <nav>
+            
+                <a href="home.html">Home</a>
+                <a href="skills.html" class="highlight">Skills</a>
+                <a href="contact.html">Contact</a>
+            
+        </nav>
+
+        <main>
+            <section>
+                <h2>Skills</h2>
+                <p>Here are some of the skills I've picked up over the years:</p>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Years Practiced</th>
+                        <th>Short Description</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>5+ years</td>
+                        <td>I learned to code by using Expage and Geocities way back in the 'day. 
+                            I eventually self taught myself HTML with a friend - we eventually joined 
+                            a web ring of other HTML coders. Like all amateur site builders, we both 
+                            went on hiatus because we thought it was cool - but it actually meant we 
+                            got bored.</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>5+ years</td>
+                        <td>After learning HTML, I learned CSS. I learned how to make my sites look 
+                            pretty. There's still a pocket CSS book lying around at my parents' house
+                            that taught me a lot of methods as I was (and still am) bad at Googling
+                            stuff.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>3 months</td>
+                        <td>Javascript is new to me - however, it's not too much of a challenge to learn.
+                            I have experience in other scripting languages such as Python, so making the 
+                            transition to Javascript was not too difficult.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>2+ years</td>
+                        <td>Python was the first language I learned in university. I learned when I went to
+                            U of T for a year. I learned the basics of Python, and I've been using it ever since.
+                            It's a great language for teaching, and I've used it for a variety of projects. I think
+                            it's one of the best programming languages because of its readability and flexibility.
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+        </main>
+
+        <footer style="background-color: var(--dark-slate-gray);
+        color: var(--eggshell);
+        padding: 10px 20px;
+        text-align: center;
+        text-shadow: var(--shadow-1px);
+        background-image: linear-gradient(to top, #00000040, #FFFFFF00, #FFFFFF00, #FFFFFF00);
+        ">
+            &copy; 2025 Thomas McCavour, 9061651, Conestoga College // 
+            Header photo credit: 
+            <a href="https://www.pexels.com/photo/forest-covered-in-white-fog-1423600/">Johannes Plenio (Pexels)</a>
+        </footer>
+    </body>
+</html>

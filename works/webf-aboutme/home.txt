@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+
+        <!-- Meta Data -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Home page for the website">
+        <meta name="keywords" content="Home, website, page">
+        <meta name="author" content="Thomas McCavour">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="styles/site.css">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h1>Thomas McCavour</h1>
+        </header>
+
+        <nav>
+            
+                <a href="home.html" class="highlight">Home</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            
+        </nav>
+
+        <main>
+            <section class="no-flex" style="min-height: 215px;">
+                <h2>Introduction</h2>
+                
+                <img src="images/me.png" class="standard-img float-left" alt="Thomas McCavour">
+                <p>Hi! My name is Thomas McCavour. I'm currently a student at Conestoga College's 
+                    Computer Application Development program. The program has taught me a lot so far, 
+                    while also allowing me to polish some skills I forgot I had in my back pocket.</p>
+                <p>My interests include gaming, exercise, politics, and ecological justice.</p>
+                
+            </section>
+            <section>
+                <h2>External Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/torxter" target="_blank">
+                            <span class="material-icons" style="vertical-align: middle;">account_circle</span> Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://mccavour.ca" target="_blank">
+                            <span class="material-icons" style="vertical-align: middle;">public</span> Website
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer style="background-color: var(--dark-slate-gray);
+        color: var(--eggshell);
+        padding: 10px 20px;
+        text-align: center;
+        text-shadow: var(--shadow-1px);
+        background-image: linear-gradient(to top, #00000040, #FFFFFF00, #FFFFFF00, #FFFFFF00);
+        ">
+            &copy; 2025 Thomas McCavour, 9061651, Conestoga College // 
+            Header photo credit: 
+            <a href="https://www.pexels.com/photo/forest-covered-in-white-fog-1423600/">Johannes Plenio (Pexels)</a>
+        </footer>
+    </body>
+</html>

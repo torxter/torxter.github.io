@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+
+        <!-- Meta Data -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Home page for the website">
+        <meta name="keywords" content="Home, website, page">
+        <meta name="author" content="Thomas McCavour">
+
+        <!-- Stylesheet -- Changed to internal to satisfy assignment requirements -->
+        <!-- <link rel="stylesheet" type="text/css" href="styles/site.css"> -->
+
+        <style type="text/css">
+            :root {
+                /* CSS HEX */
+                --cerulean: rgb(43, 93, 111);
+                --dark-slate-gray: #255957ff;
+                --cambridge-blue: #8aa295ff;
+                --eggshell: #eeebd3ff;
+                --saffron: #f7c548ff;
+                --saffron-dark: rgb(161, 119, 13);
+                --jasmine: #f3d88eff;
+
+                /* CSS Box Shadow */
+                --shadow-1px: 1px 1px 1px rgba(0, 0, 0, 0.2);
+                --shadow-1px-b: 1px 1px 1px rgba(0, 0, 0, 0.8);
+                --shadow-2px: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+                --shadow-3px: 3px 3px 3px rgba(0, 0, 0, 0.2);
+                --shadow-3px-b: 3px 3px 3px rgba(0, 0, 0, 0.4);
+
+                --shadow-white-1px: 1px 1px 1px rgba(255, 255, 255, 0.2);
+            }
+
+            /* Box Styles */
+
+            body{
+                background-color: var(--eggshell);
+                color: var(--dark-slate-gray);
+                font-family: 'Roboto', sans-serif;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                width: 100%;
+                justify-content: space-between;
+                overflow-x: hidden;
+            }
+
+            main{
+                padding: 20px;
+                flex-grow: 1;
+            }
+
+            section{
+                background-color: var(--cambridge-blue);
+                color: var(--eggshell);
+                padding: 10px 20px;
+                margin: 10px 0px;
+                border-radius: 5px;
+                box-shadow: var(--shadow-2px);
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .no-flex{
+                display: block;
+            }
+
+            section p{
+                /*display: block;
+                flex-grow: 1;*/
+                box-sizing: border-box;
+                padding: 10px;
+                margin: 0px;
+                text-align: left;
+                width: 100%;
+                /*width: calc(100% - 200px);
+                min-width: 300px;*/
+            }
+
+            section img{
+                display: block;
+                flex-grow: 0;
+            }
+
+            h1, h2, h3, h4, h5, h6{
+                color: var(--jasmine);
+                text-shadow: var(--shadow-1px);
+                width: 100%;
+                box-sizing: border-box;
+                border-bottom: solid 1px var(--jasmine);
+            }
+
+            h1{
+                margin: 0px;
+                color: var(--saffron);
+                border-bottom: none;
+                text-shadow: var(--shadow-3px-b),
+                            var(--shadow-1px-b), 
+                            var(--shadow-white-1px);
+                font-weight: bold;
+                font-size: 6vw;
+                padding: 5px;
+            }
+
+            header{
+                background-color: var(--dark-slate-gray);
+                text-align: center;
+                margin: 0px;
+                padding: 0px;
+                background-image:   
+                                    linear-gradient(to top, var(--dark-slate-gray), #FFFFFF00, #FFFFFF00, #FFFFFF00, #FFFFFF00, #FFFFFF00, #FFFFFF00),
+                                    url(../images/pexels-jplenio-1423600.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 20vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            section > h2:first-child{
+                margin-top: 5px;
+            }
+
+            ul{
+                margin: 0px;
+                padding: 0px;
+                padding-left: 30px;
+            }
+
+            /* Link Styles */
+
+            a, a:link, a:visited {
+                color: var(--cerulean);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            a:hover, a:active {
+                color: var(--saffron);
+                text-decoration: underline;
+            }
+
+            /* Navigation Links */
+
+            nav {
+                background-color: var(--dark-slate-gray);
+                color: var(--eggshell);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: left;
+                padding: 2px 20px;
+                background-image: linear-gradient(to top, #FFFFFF40, #FFFFFF00, #FFFFFF00, #FFFFFF00);
+                border-bottom: var(--saffron) solid 2px;
+                border-top: var(--saffron) solid 2px;
+            }
+
+            nav a, nav a:link, nav a:visited {
+                margin: 3px 10px;
+                display: block;
+                background-color: var(--cambridge-blue);
+                padding: 7px;
+                border-radius: 5px;
+                color: var(--saffron);
+                box-shadow: var(--shadow-2px);
+                text-shadow: var(--shadow-1px);
+                font-weight: bold;
+            }
+
+            nav a:hover, nav a:active {
+                background-color: var(--jasmine);
+                color: var(--eggshell);
+                text-decoration: none;
+                text-shadow: var(--shadow-1px-b)
+            }
+
+            nav a:active {
+                position: relative;
+                top: 1px;
+                left: 1px;
+                box-shadow: var(--shadow-1px);
+            }
+
+            .highlight, .hightlight:link, .highlight:visited {
+                background-image: linear-gradient(to top, #FFFFFF44, #FFFFFF44);
+                color: #FFFFFF !important;
+                text-shadow: var(--shadow-1px-b) !important;
+            }
+
+            footer a:link, footer a:visited {
+                color: var(--eggshell);
+                text-decoration: none;
+            }
+
+            footer a:hover, footer a:active {
+                color: var(--saffron);
+                text-decoration: underline;
+            }
+
+            /* Image Stuff */
+
+            .float-left{
+                float: left;
+                margin: 0px 10px 10px 0px;
+            }
+
+            .standard-img {
+                width: 150px;
+                border-radius: 5px;
+                box-shadow: var(--shadow-2px);
+            }
+
+            p img {
+                max-width: 100%;
+                border-radius: 5px;
+                box-shadow: var(--shadow-2px);
+            }
+
+            /* Tables */
+
+            table{
+                border-collapse: collapse;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            th, td{
+                border: 1px solid var(--dark-slate-gray);
+                padding: 5px;
+                text-align: left;
+                box-shadow: var(--shadow-1px);
+            }
+
+            tr:nth-child(odd){
+                background-image: linear-gradient(to top, #FFFFFF22, #FFFFFF22);
+            }
+
+            th{
+                text-align: center;
+                text-shadow: var(--shadow-1px);
+                background-image: linear-gradient(to top, #FFFFFF44, #FFFFFF44);
+            }
+
+            tr > td:first-child {
+                font-weight: bold;
+                padding-left: 10px;
+                padding-right: 10px;
+                color: var(--jasmine);
+                text-shadow: var(--shadow-1px)
+            }
+
+            section ul{
+                width: 100%;
+            }
+
+            /* Material Icons Fix */
+            .material-icons{
+                display: inline-flex;
+                vertical-align: middle;
+            }
+
+            /* Google Maps */
+
+            .map-container{
+                width: 100%;
+                height: 300px;
+                border:0px;
+            }
+
+            /* Forms */
+
+            form{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+            }
+
+            textarea, input[type=text], input[type=email], input[type=tel]{
+                width: 45%;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 5px;
+                box-shadow: var(--shadow-1px);
+                font-family: Roboto, sans-serif;
+                display: block;
+                box-sizing: border-box;
+            }
+
+            input[type=submit], input[type=reset]{
+                padding: 5px 10px;
+                margin: 5px;
+                border-radius: 5px;
+                box-shadow: var(--shadow-2px);
+                font-family: Roboto, sans-serif;
+                display: inline-block;
+                cursor: pointer;
+            }
+
+            label{
+                display: block;
+                width: 23%;
+                box-sizing: border-box;
+                text-align: right;
+            }
+
+            /* Form formatting for different screen sizes */ 
+
+            @media screen and (max-width: 800px){
+                form{
+                    flex-direction: column;
+                }
+
+                textarea, input[type=text], input[type=email], input[type=tel]{
+                    width: 100%;
+                }
+
+                label{
+                    width: 100%;
+                    text-align: left;
+                }
+
+                .hidden-label{
+                    display: none;
+                }
+                nav{
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            /* Lists */
+            ul, ol{
+                box-sizing: border-box;
+                max-width: 100%;
+                padding: 0px;
+                padding-left: 40px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            li {
+                text-overflow: ellipsis;
+            }
+        </style>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h1>Thomas McCavour</h1>
+        </header>
+
+        <nav>
+                <a href="home.html">Home</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html" class="highlight">Contact</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Contact</h2>
+                <p>Here are some ways you can contact me:</p>
+                <ul>
+                    <li>Email: <a href="mailto:tmccavour1651@conestogac.on.ca"><span class="material-icons">email</span> tmccavour1651@conestogac.on.ca</a></li>
+                    <li>Github: <a href="https://github.com/torxter" target="_blank"><span class="material-icons">account_circle</span> Github</a></li>
+                    <li>Website: <a href="https://mccavour.ca" target="_blank"><span class="material-icons">language</span> mccavour.ca</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Location</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5785.175199258101!2d-79.90776031079662!3d43.5317919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6f4810934363%3A0x5b97f97d97a9fef4!2sConestoga%20College-%20Milton%20campus!5e0!3m2!1sen!2sca!4v1742232516670!5m2!1sen!2sca" 
+                   class="map-container" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section>
+            <h2>Shoot me a message!</h2>
+            <form action="mailto:tmccavour1651@conestogac.on.ca">
+                <!-- Info boxes, double labels are used as spacing placeholders -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="firstName" class="hidden-label"></label>
+                <label type="lastName">Last Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="lastName" class="hidden-label"></label>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="email" class="hidden-label"></label>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="phone" class="hidden-label"></label>
+                
+                <!-- Message Box -->
+                <label for="message">Got a comment?</label>
+                <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
+                <label for="message" class="hidden-label"></label>
+                
+                <!-- Buttons -->
+                <div class="form-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                </div>
+            </form>
+        </section>
+        </main>
+
+        <footer style="background-color: var(--dark-slate-gray);
+            color: var(--eggshell);
+            padding: 10px 20px;
+            text-align: center;
+            text-shadow: var(--shadow-1px);
+            background-image: linear-gradient(to top, #00000040, #FFFFFF00, #FFFFFF00, #FFFFFF00);
+            ">
+            &copy; 2025 Thomas McCavour, 9061651, Conestoga College // 
+            Header photo credit: 
+            <a href="https://www.pexels.com/photo/forest-covered-in-white-fog-1423600/">Johannes Plenio (Pexels)</a>
+        </footer>
+    </body>
+</html>
