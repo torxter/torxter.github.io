@@ -1,0 +1,67 @@
+:root{
+    --bg-top: rgba(255, 166, 0, 0.192);
+    --bg-bottom: #008bba35;
+    --bg-middle: rgba(77, 77, 77, 0);
+
+    --overlay-top: rgba(255, 255, 255, 0.107);
+    --overlay-bottom: rgba(255, 255, 255, 0);
+
+    --bg-colour: rgb(32, 32, 32);
+
+    --text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+body{
+    background-color: var(--bg-colour);
+    background-image: 
+    linear-gradient(
+        to bottom, 
+        var(--overlay-top), 
+        var(--overlay-bottom)
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-family: "Roboto", Verdana, sans-serif;
+    font-size: 4vw;
+    color: white;
+    text-shadow: 4px 4px 0px var(--bg-top),
+                 12px 10px 0px var(--bg-bottom),
+                 20px 16px 0px var(--bg-top),
+                 28px 22px 0px var(--bg-bottom),
+                 40px 32px 0px var(--bg-top),
+                 58px 48px 0px var(--bg-bottom),
+                 70px 48px 0px var(--bg-top),
+                 -4px -4px 0px var(--bg-bottom),
+                 -12px -10px 0px var(--bg-top),
+                 -20px -16px 0px var(--bg-bottom),
+                 -28px -22px 0px var(--bg-top),
+                 -40px -32px 0px var(--bg-bottom),
+                 -58px -48px 0px var(--bg-top),
+                 -70px -48px 0px var(--bg-bottom),
+                 4px -4px 0px var(--bg-top),
+                 12px -10px 0px var(--bg-bottom),
+                 20px -16px 0px var(--bg-top),
+                 28px -22px 0px var(--bg-bottom),
+                 40px -32px 0px var(--bg-top),
+                 58px -48px 0px var(--bg-bottom),
+                 70px -48px 0px var(--bg-top),
+                 -4px 4px 0px var(--bg-bottom),
+                 -12px 10px 0px var(--bg-top),
+                 -20px 16px 0px var(--bg-bottom),
+                 -28px 22px 0px var(--bg-top),
+                 -40px 32px 0px var(--bg-bottom),
+                 -58px 48px 0px var(--bg-top),
+                 -70px 48px 0px var(--bg-bottom);
+    letter-spacing: 0.6rem;
+    margin: 0;
+    padding: 10px;
+    transform: scale(1, 3);
+}
