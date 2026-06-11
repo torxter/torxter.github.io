@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas McCavour – Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy:    #1a3a5c;
+      --accent:  #2563a8;
+      --text:    #1f2937;
+      --muted:   #4b5563;
+      --rule:    #cbd5e1;
+      --bg:      #f8fafc;
+      --white:   #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      padding: 2rem 1rem;
+    }
+
+    /* ── Page container ─────────────────────────────── */
+    .resume {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+
+    /* ── Header ─────────────────────────────────────── */
+    .resume-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2.4rem 2.4rem 1.8rem;
+      text-align: center;
+    }
+
+    .resume-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: .5rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .25rem 1.4rem;
+      font-size: .88rem;
+      color: #c5d8f0;
+      margin-bottom: .9rem;
+    }
+
+    .contact-row a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    .contact-row a:hover { text-decoration: underline; }
+
+    .contact-row .sep {
+      color: #7096b8;
+    }
+
+    .job-title {
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      color: #93c5fd;
+      text-transform: uppercase;
+    }
+
+    /* ── Body ───────────────────────────────────────── */
+    .resume-body {
+      padding: 2rem 2.4rem 2.4rem;
+    }
+
+    /* ── Sections ───────────────────────────────────── */
+    section {
+      margin-bottom: 1.8rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: .3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Summary ────────────────────────────────────── */
+    .summary p {
+      color: var(--muted);
+      margin-bottom: .6rem;
+      font-size: .93rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .5rem .8rem;
+      margin-top: .9rem;
+    }
+
+    .skills-block {
+      background: #f1f5f9;
+      border-radius: 4px;
+      padding: .65rem .85rem;
+    }
+
+    .skills-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .3rem;
+    }
+
+    .skills-block p {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── Experience & Projects entries ──────────────── */
+    .entry {
+      margin-bottom: 1.3rem;
+    }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: .2rem .5rem;
+      margin-bottom: .15rem;
+    }
+
+    .entry-org {
+      font-size: .97rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .entry-date {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .entry-role {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: .35rem;
+    }
+
+    .entry ul {
+      padding-left: 1.2rem;
+    }
+
+    .entry li {
+      font-size: .88rem;
+      color: var(--muted);
+      margin-bottom: .2rem;
+    }
+
+    /* ── Education entries ───────────────────────────── */
+    .edu-entry {
+      margin-bottom: 1.2rem;
+    }
+    .edu-entry:last-child { margin-bottom: 0; }
+
+    .edu-school {
+      font-size: .97rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .edu-degree {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: .3rem;
+    }
+
+    .edu-entry ul {
+      padding-left: 1.2rem;
+    }
+
+    .edu-entry li {
+      font-size: .88rem;
+      color: var(--muted);
+      margin-bottom: .2rem;
+    }
+
+    /* Supplemental hospitality block */
+    .additional {
+      border-left: 3px solid var(--rule);
+      padding-left: .9rem;
+      margin-top: 1rem;
+    }
+
+    .additional .entry-org { font-size: .9rem; }
+
+    /* ── Print ───────────────────────────────────────── */
+    @media print {
+      body { background: white; padding: 0; }
+      .resume { box-shadow: none; border: none; border-radius: 0; max-width: 100%; }
+      .resume-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .skills-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    @media (max-width: 600px) {
+      .resume-header { padding: 1.6rem 1.2rem 1.2rem; }
+      .resume-body { padding: 1.4rem 1.2rem 1.8rem; }
+      .resume-header h1 { font-size: 1.6rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+
+    <!-- ── HEADER ─────────────────────────────────── -->
+    <header class="resume-header">
+      <h1>Thomas McCavour</h1>
+      <div class="contact-row">
+        <span>416-806-4324</span>
+        <span class="sep">|</span>
+        <span><a href="mailto:thomas@mccavour.ca">thomas@mccavour.ca</a></span>
+        <span class="sep">|</span>
+        <span>Toronto, ON</span>
+        <span class="sep">|</span>
+        <span><a href="https://www.linkedin.com/in/thomasmccavour" target="_blank" rel="noopener noreferrer">linkedin.com/in/thomasmccavour</a></span>
+      </div>
+      <div class="job-title">IT Support Specialist &nbsp;|&nbsp; Help Desk Technician &nbsp;|&nbsp; Technical Support</div>
+    </header>
+
+    <div class="resume-body">
+
+      <!-- ── SUMMARY ───────────────────────────────── -->
+      <section class="summary">
+        <p>Customer-focused IT professional with hands-on experience supporting Windows workstations, POS systems, printers, scanners, Microsoft 365 environments, and network-connected devices. Skilled at troubleshooting hardware, software, and connectivity issues while delivering exceptional end-user support.</p>
+        <p>Combines technical expertise with extensive customer service experience, allowing for clear communication with users of all technical skill levels. Experienced with Windows, Linux, macOS, Docker, Proxmox, networking fundamentals, hardware repair, and technical documentation. Seeking an opportunity to build a long-term career in IT support and systems administration.</p>
+
+        <div class="skills-grid">
+          <div class="skills-block">
+            <div class="skills-label">Core Competencies</div>
+            <p>Technical Support &bull; Help Desk Support &bull; Hardware Troubleshooting &bull; Software Installation &bull; End User Support &bull; Network Troubleshooting &bull; Asset Management &bull; Technical Documentation &bull; Customer Service &bull; Problem Solving &bull; Team Collaboration</p>
+          </div>
+          <div class="skills-block">
+            <div class="skills-label">Tools &amp; Technologies</div>
+            <p>Windows 10/11 &bull; Linux &bull; macOS &bull; Microsoft 365 &bull; Teams &bull; Docker &bull; Proxmox &bull; MySQL/MariaDB &bull; Ubiquiti Networking &bull; Python &bull; JavaScript &bull; TypeScript &bull; C# &bull; Snipe-IT &bull; Trello</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROFESSIONAL EXPERIENCE ───────────────── -->
+      <section>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-org">Technical Projects &amp; Education &mdash; Toronto, ON</span>
+            <span class="entry-date">Jul 2024 – Present</span>
+          </div>
+          <div class="entry-role">Independent Technical Development</div>
+          <ul>
+            <li>Maintains a strong personal interest in computer hardware, gaming systems, networking and technology troubleshooting.</li>
+            <li>Regularly researches, builds, configures and optimizes computer systems, peripherals and software environments.</li>
+            <li>Continuously develops technical knowledge through hands-on learning, home lab projects, virtualization technologies and emerging IT tools.</li>
+            <li>Demonstrates a passion for technology by independently learning new systems, troubleshooting complex issues and staying current with industry trends.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-org">Hodgins Building Centre (Formerly RONA) &mdash; Wingham, ON</span>
+            <span class="entry-date">April 2021 – Oct 2021</span>
+          </div>
+          <div class="entry-role">IT Technician</div>
+          <ul>
+            <li>Provided technical support for Windows workstations, POS systems, printers, scanners and network equipment.</li>
+            <li>Installed and configured Windows 10 workstations, including user migrations and data transfers.</li>
+            <li>Troubleshot and resolved hardware, software, barcode scanner and connectivity issues.</li>
+            <li>Managed printer configurations, firmware updates and scan-to-email functionality.</li>
+            <li>Assisted with network infrastructure projects, including Cat6 cabling and equipment deployment.</li>
+            <li>Developed Excel and Python tools to improve data accuracy and operational efficiency.</li>
+            <li>Maintained asset tracking and inventory management using Snipe-IT.</li>
+            <li>Delivered end-user support and technical documentation while providing excellent customer service.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-org">Merlot Bistro &mdash; Etobicoke, ON</span>
+            <span class="entry-date">Jun 2023 – Jul 2024</span>
+          </div>
+          <div class="entry-role">Server</div>
+          <ul>
+            <li>Delivered exceptional customer service in a fast-paced environment while managing multiple priorities and time-sensitive requests.</li>
+            <li>Resolved customer concerns professionally and efficiently.</li>
+            <li>Built strong communication, problem-solving, and conflict-resolution skills transferable to technical support environments.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-org">North Middlesex YMCA &mdash; Parkhill, ON</span>
+            <span class="entry-date">Oct 2022 – May 2023</span>
+          </div>
+          <div class="entry-role">Wellness Coach</div>
+          <ul>
+            <li>Assisted members with program guidance and support.</li>
+            <li>Developed strong interpersonal communication and coaching skills.</li>
+            <li>Maintained a positive and professional customer experience.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-org">Grog's Pub &amp; Grill &mdash; Lambton Shores, ON</span>
+            <span class="entry-date">Apr 2022 – May 2023</span>
+          </div>
+          <div class="entry-role">Server</div>
+          <ul>
+            <li>Provided high-quality customer service in a busy hospitality environment.</li>
+            <li>Managed competing priorities while maintaining attention to detail.</li>
+            <li>Worked collaboratively with team members to ensure efficient operations.</li>
+          </ul>
+        </div>
+
+        <div class="additional">
+          <div class="entry-header">
+            <span class="entry-org">The Burren Pub &bull; Cluny Bistro &bull; Pure Spirits &mdash; Toronto, ON</span>
+            <span class="entry-date">2014 – 2019</span>
+          </div>
+          <div class="entry-role">Additional Hospitality Experience</div>
+          <ul>
+            <li>Provided customer service in high-volume hospitality environments.</li>
+            <li>Developed strong communication, teamwork and customer relationship skills.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── TECHNICAL PROJECTS ─────────────────────── -->
+      <section>
+        <h2 class="section-title">Technical Projects</h2>
+
+        <div class="entry">
+          <div class="entry-role">Home Lab Environment</div>
+          <ul>
+            <li>Built and maintained a virtualized home lab using Proxmox, Docker, Linux and self-hosted services.</li>
+            <li>Configured networking, storage, backups and containerized applications.</li>
+            <li>Gained practical experience in system administration, troubleshooting and infrastructure management.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-role">Our Missing Middle &ndash; Capstone Project</div>
+          <ul>
+            <li>Led a multidisciplinary development team in creating an application that visualized medium-density housing opportunities using Google Maps integration and AI-generated imagery.</li>
+            <li>Coordinated project planning, documentation, testing and stakeholder communication.</li>
+            <li>Developed functionality using TypeScript, JavaScript and modern development practices.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── EDUCATION ──────────────────────────────── -->
+      <section>
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-entry">
+          <div class="edu-school">Conestoga College &mdash; Waterloo, ON</div>
+          <div class="edu-degree">Certificate with Honours – Computer Application Development &nbsp;&bull;&nbsp; Jan 2025 – Sept 2025</div>
+          <ul>
+            <li>Developed applications using TypeScript, JavaScript, and C#.</li>
+            <li>Led group capstone project and coordinated team deliverables.</li>
+            <li>Built experience with project planning, technical documentation and software development methodologies.</li>
+          </ul>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-school">George Brown College &mdash; Toronto, ON</div>
+          <div class="edu-degree">Diploma with Honours – Electromechanical Engineering Technician &nbsp;&bull;&nbsp; Jan 2016 – Apr 2017</div>
+          <ul>
+            <li>Completed coursework in networking, PLCs, circuit design, C programming and automation systems.</li>
+            <li>Designed and programmed an automated herb dispenser using Arduino technology.</li>
+            <li>Participated in smart-home technology and automation projects.</li>
+          </ul>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-school">Toronto Metropolitan University &mdash; Toronto, ON</div>
+          <div class="edu-degree">Regional &amp; Urban Planning Coursework &nbsp;&bull;&nbsp; 2019 – 2021</div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-school">University of Toronto &mdash; Toronto, ON</div>
+          <div class="edu-degree">Computer Science Coursework &nbsp;&bull;&nbsp; 2010 – 2012</div>
+        </div>
+      </section>
+
+    </div><!-- /resume-body -->
+  </div><!-- /resume -->
+</body>
+</html>
